@@ -1,0 +1,72 @@
+[
+    {
+        "class_name": "Basketball",
+        "students_enrolled": 50,
+        "picture": "https://media.istockphoto.com/id/1427997649/photo/basketball-training-game-background-basketball-on-wooden-court-floor-close-up-with-blurred.webp?b=1&s=170667a&w=0&k=20&c=ExmYTHMbyxp7hZRT2q2RxrgUtWWLUFhqU64a-mxGJiw=",
+        "instructor_name": "John Smith",
+        "available_seats": 10
+    },
+    {
+        "class_name": "Football",
+        "students_enrolled": 35,
+        "picture": "https://media.istockphoto.com/id/1397817779/photo/goal-soccer-ball-hitting-the-goal-net-after-scoring.webp?b=1&s=170667a&w=0&k=20&c=LGXM4b_OK1L95zWPngDYE6aw4BT0sTl6H7Youy4wWJA=",
+        "instructor_name": "Sarah Johnson",
+        "available_seats": 15
+    },
+    {
+        "class_name": "Tennis",
+        "students_enrolled": 20,
+        "picture": "https://media.istockphoto.com/id/1321281096/photo/tennis-balls-with-racket-on-court.webp?b=1&s=170667a&w=0&k=20&c=ly7tNjUA9o9g8XOzxyrhhUhQRjhcdkXtjkO5kbnYOqQ=",
+        "instructor_name": "Michael Brown",
+        "available_seats": 10
+    },
+    {
+        "class_name": "Swimming",
+        "students_enrolled": 15,
+        "picture": "https://media.istockphoto.com/id/1332857654/photo/aerial-top-view-male-swimmer-swimming-in-swimming-pool-professional-determined-athlete.webp?b=1&s=170667a&w=0&k=20&c=JQ48D9dgwHAXaKeXBuARMZzBFDdrvooQRbbovCJUYt0=",
+        "instructor_name": "Emily Davis",
+        "available_seats": 5
+    },
+    {
+        "class_name": "Cricket",
+        "students_enrolled": 25,
+        "picture": "https://media.istockphoto.com/id/497203317/photo/the-tools-for-a-batsman.webp?b=1&s=170667a&w=0&k=20&c=Xr5tRw7jXw-aGq9-BicshRYoN9Z2unI1bXTUwc0TmKo=",
+        "instructor_name": "David Wilson",
+        "available_seats": 5
+    },
+    {
+        "class_name": "Gymnastics",
+        "students_enrolled": 12,
+        "picture": "https://media.istockphoto.com/id/497203317/photo/the-tools-for-a-batsman.webp?b=1&s=170667a&w=0&k=20&c=Xr5tRw7jXw-aGq9-BicshRYoN9Z2unI1bXTUwc0TmKo=",
+        "instructor_name": "Jessica Thompson",
+        "available_seats": 8
+    },
+    {
+        "class_name": "Volleyball",
+        "students_enrolled": 18,
+        "picture": "https://media.istockphoto.com/id/497203317/photo/the-tools-for-a-batsman.webp?b=1&s=170667a&w=0&k=20&c=Xr5tRw7jXw-aGq9-BicshRYoN9Z2unI1bXTUwc0TmKo=",
+        "instructor_name": "Daniel Johnson",
+        "available_seats": 12
+    },
+    {
+        "class_name": "Karate",
+        "students_enrolled": 30,
+        "picture": "https://media.istockphoto.com/id/497203317/photo/the-tools-for-a-batsman.webp?b=1&s=170667a&w=0&k=20&c=Xr5tRw7jXw-aGq9-BicshRYoN9Z2unI1bXTUwc0TmKo=",
+        "instructor_name": "Alex Davis",
+        "available_seats": 20
+    },
+    {
+        "class_name": "Yoga",
+        "students_enrolled": 15,
+        "picture": "https://media.istockphoto.com/id/497203317/photo/the-tools-for-a-batsman.webp?b=1&s=170667a&w=0&k=20&c=Xr5tRw7jXw-aGq9-BicshRYoN9Z2unI1bXTUwc0TmKo=",
+        "instructor_name": "Sophia Williams",
+        "available_seats": 10
+    },
+    {
+        "class_name": "Table Tennis",
+        "students_enrolled": 8,
+        "picture": "https://media.istockphoto.com/id/497203317/photo/the-tools-for-a-batsman.webp?b=1&s=170667a&w=0&k=20&c=Xr5tRw7jXw-aGq9-BicshRYoN9Z2unI1bXTUwc0TmKo=",
+        "instructor_name": "Emma Wilson",
+        "available_seats": 12
+    }
+]
