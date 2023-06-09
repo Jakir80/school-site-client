@@ -1,47 +1,21 @@
 import React, { useContext, useEffect, useState } from 'react';
-
-import Swal from 'sweetalert2';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 
-const MyBookings = () => {
+const Myclass = () => {
     const { user } = useContext(AuthContext)
-    const [myBookings, SetMybookings] = useState([])
+    const [classes, SetClasses] = useState([])
+    console.log(classes)
     useEffect(() => {
-        fetch(`http://localhost:5000/mybookings/${user?.email}`)
+        fetch(`http://localhost:5000/myclass/${user?.email}`)
             .then(res => res.json())
-            .then(data => SetMybookings(data))
+            .then(data => SetClasses(data))
     }, [user])
 
-    const handledelete = (id) => {
-        Swal.fire({
-            title: 'Are you sure?',
-            text: "Are you sure want to delete this ?",
-            icon: 'warning',
-            showCancelButton: true,
-            confirmButtonColor: '#3085d6',
-            cancelButtonColor: '#d33',
-            confirmButtonText: 'Yes, delete it!'
-        }).then((result) => {
-            if (result.isConfirmed) {
-                fetch(`http://localhost:5000/bookings/${id}`, {
-                    method: "DELETE",
-                    headers: {
-                        "content-type": "application/json"
-                    }
-                })
-                    .then(res => res.json())
-                    .then(data => {
-                        console.log(data)
-                        const remaining = myBookings.filter(booked => booked._id != id);
-                        SetMybookings(remaining)
-                    })
-            }
-        })
-    }
 
-
+    // classImageURL, className,price
     return (
         <div>
+            <div>
             <div className="overflow-x-auto">
                 <table className="table">
                     {/* head */}
@@ -50,13 +24,13 @@ const MyBookings = () => {
                             <th>Class image</th>
                             <th>Instructor Name</th>
                             <th>Class Name</th>
-                            <th>Delete</th>
-                            <th>Payment</th>
+                            <th>status</th>
+                          
                         </tr>
                     </thead>
                     <tbody>
                         {
-                            myBookings.map(booking => <>
+                            classes.map(booking => <>
                                 <tr key={booking._id}>
                                     <td>
                                         <div className="flex items-center space-x-3">
@@ -78,9 +52,9 @@ const MyBookings = () => {
                                             booking.className
                                         }</td>
                                     <th>
-                                        <button onClick={()=>handledelete(booking._id)} className="btn btn-primary btn-lg text-white p-2">Delete</button>
+                                        <button className="btn btn-primary btn-lg text-white p-2">{booking.status}</button>
                                     </th>
-                                    <th><button className='btn btn-primary btn-lg text-white p-2'>Payment</button></th>
+                                    
                                 </tr>
 
                             </>)
@@ -90,7 +64,9 @@ const MyBookings = () => {
                 </table>
             </div>
         </div>
+
+        </div>
     );
 };
 
-export default MyBookings;
+export default Myclass;

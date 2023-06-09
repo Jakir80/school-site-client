@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Swal from 'sweetalert2';
+import Test from './Test';
 
 const Alluser = () => {
     const [users, Setusers] = useState([])
@@ -12,6 +13,9 @@ const Alluser = () => {
     const handlemakeAdmin = (person) => {
         fetch(`http://localhost:5000/users/admin/${person._id}`, {
             method: 'PATCH',
+            headers: {
+                authorization: `bearer ${localStorage.getItem('access-token')}`
+            }
         })
             .then((res) => res.json())
             .then((data) => {
@@ -33,6 +37,9 @@ const Alluser = () => {
     const handlemakeinstructor = (instructor) => {
         fetch(`http://localhost:5000/users/instructor/${instructor._id}`, {
             method: 'PATCH',
+            headers: {
+                authorization: `bearer ${localStorage.getItem('access-token')}`
+            }
         })
             .then((res) => res.json())
             .then((data) => {
@@ -77,8 +84,8 @@ const Alluser = () => {
                                             user.email
                                         }</td>
                                     <th>
-                                    {
-                                        user.role === 'instructor' ? 'instructor' : <button onClick={() => handlemakeinstructor(user)} className="btn btn-primary text-white btn-lg">Make Instructor</button>}
+                                        {
+                                            user.role === 'instructor' ? 'instructor' : <button onClick={() => handlemakeinstructor(user)} className="btn btn-primary text-white btn-lg">Make Instructor</button>}
                                     </th>
                                     <th>{
                                         user.role === 'admin' ? 'admin' : <button onClick={() => handlemakeAdmin(user)} className="btn btn-primary text-white btn-lg">Make admin</button>}</th>
@@ -89,6 +96,8 @@ const Alluser = () => {
 
                     </tbody>
                 </table>
+         {/* <AllClass></AllClass> */}
+         <Test></Test>
             </div>
 
         </div>
