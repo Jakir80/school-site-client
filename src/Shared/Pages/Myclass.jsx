@@ -1,16 +1,19 @@
 import React, { useContext, useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 
 const Myclass = () => {
     const { user } = useContext(AuthContext)
     const [classes, SetClasses] = useState([])
-    console.log(classes)
+    // console.log(classes)
     useEffect(() => {
-        fetch(`http://localhost:5000/myclass/${user?.email}`)
+        fetch(`http://localhost:5000/myclass/${user?.email}`,      
+        )
             .then(res => res.json())
             .then(data => SetClasses(data))
     }, [user])
 
+    // console.log(classes)
 
     // classImageURL, className,price
     return (
@@ -52,7 +55,13 @@ const Myclass = () => {
                                             booking.className
                                         }</td>
                                     <th>
-                                        <button className="btn btn-primary btn-lg text-white p-2">{booking.status}</button>
+                                       <div className='flex gap-4'>
+                                       <button className="btn btn-primary btn-lg text-white p-2">{booking.status}</button>
+
+                                       <Link to={`/updateclass/${booking._id}`}><button className="btn btn-md bg-gray-700">Edit </button></Link>
+
+                                       
+                                       </div>
                                     </th>
                                     
                                 </tr>

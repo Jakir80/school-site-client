@@ -21,9 +21,9 @@ const SignUp = () => {
       .then(result => {
         const loggedUser = result.user;
         console.log(loggedUser);
-        updateUserProfile(data.name, data.photoURL)
+        updateUserProfile(loggedUser,data.name, data.photoUrl)
           .then(() => {
-            const saveUser = { name: data.name, email: data.email }
+            const saveUser = { name: data.name, email: data.email,photoUrl:data.photoUrl }
             fetch('http://localhost:5000/users', {
               method: 'POST',
               headers: {
@@ -53,7 +53,7 @@ const SignUp = () => {
       .then(result => {
         const loggedInUser = result.user;
         // console.log(loggedInUser);
-        const saveUser = { name: loggedInUser.displayName, email: loggedInUser.email,photo:loggedInUser.photoURL }
+        const saveUser = { name: loggedInUser.displayName, email: loggedInUser.email,photo:loggedInUser.photoUrl }
         fetch('http://localhost:5000/users', {
           method: 'POST',
           headers: {

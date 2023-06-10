@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Alluser from "../Dashboard/Alluser";
 import Dashboard from "../Dashboard/Dashboard";
 import InstructorComponent from "../Dashboard/InstructorComponent";
+import UpdateClass from "../Dashboard/UpdateClass";
 import Main from "../Layouts/Main";
 import Login from "../Pages/Login";
 import SignUp from "../Pages/SignUp";
@@ -59,6 +60,12 @@ const router=createBrowserRouter([
             {
                 path:'myclass',
                 element:<Myclass></Myclass>
+            },
+            {
+                path:'updateclass/:id',
+                element:<UpdateClass></UpdateClass>,
+                loader: ({ params }) => fetch(`http://localhost:5000/update/${params.id}`)
+            
             }
          
             

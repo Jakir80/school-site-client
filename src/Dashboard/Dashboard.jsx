@@ -2,7 +2,7 @@ import { Link, Outlet } from 'react-router-dom';
 import UseAdmin from './Admin';
 import useInstructor from './Useinstructor';
 const Dashboard = () => {
-// const isAdmin=true
+    // const isAdmin=true
     // const [isAdmin] = Admin()
     const [isAdmin] = UseAdmin()
     const [isInstructor] = useInstructor()
@@ -17,7 +17,7 @@ const Dashboard = () => {
                 </div>
                 <div className="drawer-side">
                     <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
-                    <ul className="menu p-4 w-80 h-full bg-base-200 text-base-content">               
+                    <ul className="menu p-4 w-80 h-full bg-base-200 text-base-content">
                         {
                             isAdmin ? <>
                                 <li><Link>Admin Home</Link></li>
