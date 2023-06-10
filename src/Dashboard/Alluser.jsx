@@ -1,15 +1,25 @@
-import React, { useEffect, useState } from 'react';
+import { useQuery } from '@tanstack/react-query';
+import React from 'react';
 import Swal from 'sweetalert2';
 import Test from './Test';
 
 const Alluser = () => {
-    const [users, Setusers] = useState([])
-    useEffect(() => {
-        fetch('http://localhost:5000/users')
-            .then(res => res.json())
-            .then(data => Setusers(data))
+    // const [users, Setusers] = useState([])
+    // useEffect(() => {
+    //     fetch('http://localhost:5000/users')
+    //         .then(res => res.json())
+    //         .then(data => Setusers(data))
 
-    }, [])
+    // }, [])
+const {data:users=[],refetch}=useQuery({
+    queryKey:["users"],
+    queryFn:async()=>{
+        const response=await fetch('http://localhost:5000/users')
+        return response.json()
+    }
+    
+});
+
     const handlemakeAdmin = (person) => {
         fetch(`http://localhost:5000/users/admin/${person._id}`, {
             method: 'PATCH',
@@ -21,6 +31,7 @@ const Alluser = () => {
             .then((data) => {
                 console.log(data);
                 if (data.modifiedCount) {
+                    refetch();
                     Swal.fire({
                         position: 'top-end',
                         icon: 'success',
@@ -45,6 +56,7 @@ const Alluser = () => {
             .then((data) => {
                 console.log(data);
                 if (data.modifiedCount) {
+                    refetch();
                     Swal.fire({
                         position: 'top-end',
                         icon: 'success',

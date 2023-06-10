@@ -5,17 +5,12 @@ import { AuthContext } from '../../AuthProvider/AuthProvider';
 const Myclass = () => {
     const { user } = useContext(AuthContext)
     const [classes, SetClasses] = useState([])
-    // console.log(classes)
-    useEffect(() => {
+         useEffect(() => {
         fetch(`http://localhost:5000/myclass/${user?.email}`,      
         )
             .then(res => res.json())
             .then(data => SetClasses(data))
     }, [user])
-
-    // console.log(classes)
-
-    // classImageURL, className,price
     return (
         <div>
             <div>
@@ -58,9 +53,7 @@ const Myclass = () => {
                                        <div className='flex gap-4'>
                                        <button className="btn btn-primary btn-lg text-white p-2">{booking.status}</button>
 
-                                       <Link to={`/updateclass/${booking._id}`}><button className="btn btn-md bg-gray-700">Edit </button></Link>
-
-                                       
+                                       <Link to={`/updateclass/${booking._id}`}><button className="btn btn-primary">Update </button></Link>                                      
                                        </div>
                                     </th>
                                     

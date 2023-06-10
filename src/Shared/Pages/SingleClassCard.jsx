@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import React, { useContext } from 'react';
+import Swal from 'sweetalert2';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 
 const SingleClassCard = ({ singleclass }) => {
@@ -31,7 +32,7 @@ const SingleClassCard = ({ singleclass }) => {
       .then(data => {
         // console.log('Booking response:', data);
         if (data.insertedId) {
-          alert("Booked Successfully")
+         Swal.fire('added successfully')
         }
       })
       .catch(error => {
