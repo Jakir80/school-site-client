@@ -15,18 +15,18 @@ const Login = () => {
   };
 
   return (
-    <div className="flex h-screen bg-gray-200">
+    <div className="flex w-full p-40 bg-gray-200">
       <div className="m-auto w-1/3">
-        <form onSubmit={handleSubmit(onSubmit)} className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-          <div className="mb-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
+        <form onSubmit={handleSubmit(onSubmit)} className=" text-black shadow-md  p-20 rounded-lg border-2 w-full border-green-500 mb-4">
+          <div className="mb-4 ">
+            <label className=" text-sm font-bold mb-2" htmlFor="email">
               Email
             </label>
             <input
               {...register('email', { required: true })}
               type="text"
               placeholder="Email"
-              className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
+              className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline  ${
                 errors.email ? 'border-red-500' : ''
               }`}
             />
@@ -35,14 +35,14 @@ const Login = () => {
             )}
           </div>
           <div className="mb-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="password">
+            <label className="block  text-sm font-bold mb-2" htmlFor="password">
               Password
             </label>
             <input
               {...register('password', { required: true })}
               type="password"
               placeholder="Password"
-              className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
+              className={`shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline ${
                 errors.password ? 'border-red-500' : ''
               }`}
             />
@@ -53,14 +53,14 @@ const Login = () => {
           <div className="flex items-center justify-between">
             <button
               type="submit"
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              className="text-white btn btn-accent"
             >
               Sign In
             </button>
 
           </div>
         </form>
-      <p>Dont have a account please Sign up <Link to='/SignUp'><button className='btn-primary'>Sign Up</button></Link> </p>
+      <p className='text-black'>Dont have a account please Sign up <Link to='/SignUp'><button className='btn btn-accent'>Sign Up</button></Link> </p>
       </div>
     </div>
   );

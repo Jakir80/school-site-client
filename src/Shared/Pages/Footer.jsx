@@ -10,7 +10,7 @@ const Footer = () => {
                         <h2 className="text-white text-lg font-semibold mb-4">About Us</h2>
                        <div className="flex gap-2 items-center">
                         <h1 className="text-white">Sports World</h1>
-                       <img className="h-14 w-auto" src="https://i.ibb.co/qdYFr2f/box.png" alt="" />
+                       <img className="h-14 w-auto" src="https://i.postimg.cc/7YQyztjs/download-removebg-preview.png" alt="" />
                        </div>
                         <p className="text-white text-sm">We are dedicated to bringing joy and imagination to kids through our wide range of high-quality toys. Explore our collection and spark your child's creativity today!</p>
                     </div>

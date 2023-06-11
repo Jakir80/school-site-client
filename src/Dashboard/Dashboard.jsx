@@ -31,7 +31,7 @@ const Dashboard = () => {
                                     <li><Link to='/booking'>My Booking</Link>
                                     </li>
                                     {/* <li><Link to='/payment'>Payment</Link></li> */}
-                                    <li><Link>Payment History</Link></li>
+                                    <li><Link to='/payment'>Payment History</Link></li>
                                     <li><Link>User Home</Link></li></>
                         }
                         <div className='divider'></div>

@@ -55,6 +55,10 @@ const MyBookings = () => {
                             <th>Payment</th>
                         </tr>
                     </thead>
+                    <button className="btn">
+                       booking
+                        <div className="badge">{myBookings.length}</div>
+                    </button>
                     <tbody className='text-white'>
                         {
                             myBookings.map(booking => <>
@@ -67,7 +71,7 @@ const MyBookings = () => {
                                                 </div>
                                             </div>
                                             <div>
-                                                <div className="font-bold">{booking. className}</div>
+                                                <div className="font-bold">{booking.className}</div>
 
                                             </div>
                                         </div>
@@ -79,7 +83,7 @@ const MyBookings = () => {
                                             booking.className
                                         }</td>
                                     <th>
-                                        <button onClick={()=>handledelete(booking._id)} className="btn btn-accent text-white">Delete</button>
+                                        <button onClick={() => handledelete(booking._id)} className="btn btn-accent text-white">Delete</button>
                                     </th>
                                     <th><Link to={`/payment/${booking._id}`}><button className="btn btn-accent text-white">Payment </button></Link>  </th>
                                 </tr>

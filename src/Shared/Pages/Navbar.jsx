@@ -39,19 +39,14 @@ const Navbar = () => {
         return route === location.pathname;
     };
 
-
-   
-
-
-
-
     return (
         <nav className="bg-emerald-800 mb-8  sticky-top">
             <div className="mx-auto px-4 py-2 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-16">
                     {/* Logo */}
-                    <div className="flex-shrink-0">
-                        <img src="https://i.ibb.co/qdYFr2f/box.png" alt="Logo" className="h-20 w-auto" />
+                    <div className="flex gap-5 items-center">
+                        <img src="https://i.postimg.cc/7YQyztjs/download-removebg-preview.png"  alt="Logo" className="h-20 w-auto  avatar rounded-circle text-white" />
+                        <h1 className='text-red-400 font-semibold text-3xl'>sports <span>World</span> </h1>
                     </div>
                     <div className="hidden sm:flex sm:items-center sm:justify-center flex-grow">
                         <Link

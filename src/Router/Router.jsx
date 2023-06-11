@@ -3,6 +3,7 @@ import Alluser from "../Dashboard/Alluser";
 import Dashboard from "../Dashboard/Dashboard";
 import InstructorComponent from "../Dashboard/InstructorComponent";
 import Payment from "../Dashboard/Payment";
+import PaymentHistory from "../Dashboard/PaymentHistory";
 import Test from "../Dashboard/Test";
 import UpdateClass from "../Dashboard/UpdateClass";
 import Main from "../Layouts/Main";
@@ -78,6 +79,10 @@ const router=createBrowserRouter([
                 element:<UpdateClass></UpdateClass>,
                 loader: ({ params }) => fetch(`http://localhost:5000/update/${params.id}`)
             
+            },
+            {
+                path:'payment',
+                element:<PaymentHistory></PaymentHistory>
             }
          
             

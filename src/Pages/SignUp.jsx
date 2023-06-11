@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { useForm } from 'react-hook-form';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import { AuthContext } from '../AuthProvider/AuthProvider';
 // Update the path to your AuthContext
@@ -21,9 +21,9 @@ const SignUp = () => {
       .then(result => {
         const loggedUser = result.user;
         console.log(loggedUser);
-        updateUserProfile(loggedUser,data.name, data.photoUrl)
+        updateUserProfile(loggedUser, data.name, data.photoUrl)
           .then(() => {
-            const saveUser = { name: data.name, email: data.email,photoUrl:data.photoUrl }
+            const saveUser = { name: data.name, email: data.email, photoUrl: data.photoUrl }
             fetch('http://localhost:5000/users', {
               method: 'POST',
               headers: {
@@ -53,7 +53,7 @@ const SignUp = () => {
       .then(result => {
         const loggedInUser = result.user;
         // console.log(loggedInUser);
-        const saveUser = { name: loggedInUser.displayName, email: loggedInUser.email,photo:loggedInUser.photoUrl }
+        const saveUser = { name: loggedInUser.displayName, email: loggedInUser.email, photo: loggedInUser.photoUrl }
         fetch('http://localhost:5000/users', {
           method: 'POST',
           headers: {
@@ -72,7 +72,7 @@ const SignUp = () => {
   return (
     <div className="bg-gray-100 flex items-center justify-center h-screen">
       <div className="bg-white p-8 rounded shadow-lg max-w-md w-full">
-        <h2 className="text-2xl font-bold mb-8 text-center">Sign Up</h2>
+        <h2 className="text-2xl font-bold mb-8 text-black text-center">Sign Up</h2>
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="mb-6">
             <label htmlFor="name" className="block text-gray-700 text-sm font-bold mb-2">
@@ -162,12 +162,16 @@ const SignUp = () => {
           </div>
           <button
             type="submit"
-            className="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 rounded-lg focus:outline-none focus:shadow-outline-blue"
+            className="btn-block btn btn-accent hover:bg-green-600 text-white font-bold py-3 rounded-lg focus:outline-none focus:shadow-outline-blue"
           >
             Sign Up
           </button>
         </form>
-        <button className='btn-lg btn-primary' onClick={handleGooglesignin}> Google </button>
+        <button className='btn-lg hover:bg-green-600 btn-block mt-5 border-green-400 border-2' onClick={handleGooglesignin}><div className='flex items-center justify-center gap-3'>
+          <img className='w-10 h-10' src='https://i.ibb.co/6ZMQvd1/google.png' alt="" />  <h2>Sign up with Google</h2>
+        </div> </button>
+        <p>Already have a account ? Please <Link to='/login'><button className='btn btn-accent m-3'>Login</button></Link></p>
+
       </div>
     </div>
   );
