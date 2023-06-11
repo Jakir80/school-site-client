@@ -50,8 +50,8 @@ const Slider = () => {
                 <div>
 
                     <div>
-                        <h2 className='text-6xl text-white font-bold'>Affordable Price  For Car Servicing</h2>
-                        <p className='text-white mb-10'>There are many variations of passages  of  available, but the majority have suffered alteration  in some form</p>
+                        <h2 className='text-6xl text-white font-bold'>This is our Academic website where is you can buy class</h2>
+                        <p className='text-white mb-10'>Lorem ipsum dolor sit amet consectetur adipisicing elit. A in, molestiae aliquam error vero repudiandae deleniti id corrupti ipsa atque.</p>
                     </div>
                     
                 </div>
@@ -67,8 +67,8 @@ const Slider = () => {
                 <div>
 
                     <div>
-                        <h2 className='text-6xl text-white font-bold'>Affordable Price  For Car Servicing</h2>
-                        <p className='text-white mb-10'>There are many variations of passages  of  available, but the majority have suffered alteration  in some form</p>
+                        <h2 className='text-6xl text-white font-bold'>This is our Academic website where is you can buy class</h2>
+                        <p className='text-white mb-10'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque nisi totam sit consequatur dolor fugit officia possimus a omnis perspiciatis.</p>
                     </div>
                    
                 </div>
