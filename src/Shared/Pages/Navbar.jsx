@@ -6,6 +6,7 @@ const Navbar = () => {
     const handleLogout = () => {
         logOut()
     }
+    const [isDarkMode, setIsDarkMode] = useState(false);
     const location = useLocation();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const toggleMenu = () => {
@@ -17,8 +18,18 @@ const Navbar = () => {
     const isActiveRoute = (route) => {
         return route === location.pathname;
     };
+
+
+    const toggleDarkMode = () => {
+      setIsDarkMode(!isDarkMode);
+      // You can add additional logic here to apply dark mode to your website
+    };
+
+
+
+
     return (
-        <nav className="bg-gray-600 mb-8  sticky-top">
+        <nav className="bg-emerald-800 mb-8  sticky-top">
             <div className="mx-auto px-4 py-2 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-16">
                     {/* Logo */}
@@ -58,7 +69,8 @@ const Navbar = () => {
                             onClick={closeMenu}
                         >
                            Dashboard
-                        </Link>                       
+                        </Link>  
+                      {/* <ThemeToggle></ThemeToggle>                   */}
                                          
                     </div>
 

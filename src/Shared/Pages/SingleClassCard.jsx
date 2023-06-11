@@ -8,6 +8,7 @@ const SingleClassCard = ({ singleclass }) => {
     classImageURL,
     availableSeats,
     price,
+  
     instructorName } = singleclass;
   const { user } = useContext(AuthContext)
   const handleBooking = () => {
@@ -17,8 +18,9 @@ const SingleClassCard = ({ singleclass }) => {
       availableSeats,
       price,
       instructorName,
+      booked:singleclass._id,
       email: user.email,
-
+    
     };
 
     fetch('http://localhost:5000/booking', {
@@ -41,7 +43,7 @@ const SingleClassCard = ({ singleclass }) => {
   }
   return (
     <div>
-      <div className="card card-compact w-96 bg-base-100 shadow-xl">
+      <div className="card card-compact w-96 text-white  shadow-2xl border-b-sky-600  border-2 bg-emerald-800">
         <figure><img src={classImageURL} alt="Shoes" /></figure>
         <div className="card-body">
           <h2 className="card-title">Instructor Name:  {
@@ -50,7 +52,7 @@ const SingleClassCard = ({ singleclass }) => {
           {/* <p> How Much Student Buy it :  {students_enrolled}</p> */}
           <p> Available Seat:  {availableSeats}</p>
           <div className="card-actions justify-end">
-            <button onClick={handleBooking} className="btn btn-primary">Booked</button>
+            <button onClick={handleBooking} className="btn btn-accent p-2">Booking Now</button>
 
           </div>
 

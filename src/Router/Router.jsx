@@ -2,6 +2,8 @@ import { createBrowserRouter } from "react-router-dom";
 import Alluser from "../Dashboard/Alluser";
 import Dashboard from "../Dashboard/Dashboard";
 import InstructorComponent from "../Dashboard/InstructorComponent";
+import Payment from "../Dashboard/Payment";
+import Test from "../Dashboard/Test";
 import UpdateClass from "../Dashboard/UpdateClass";
 import Main from "../Layouts/Main";
 import Login from "../Pages/Login";
@@ -60,6 +62,16 @@ const router=createBrowserRouter([
             {
                 path:'myclass',
                 element:<Myclass></Myclass>
+            },
+            {
+                path:'payment/:id',
+                element:<Payment></Payment>,
+                loader:({params})=>fetch(`http://localhost:5000/payment/${params.id}`)
+                
+            },
+            {
+                path:'allclass',
+                element:<Test></Test>
             },
             {
                 path:'updateclass/:id',

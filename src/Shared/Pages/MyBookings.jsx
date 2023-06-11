@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 
+import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 
@@ -45,7 +46,7 @@ const MyBookings = () => {
             <div className="overflow-x-auto">
                 <table className="table">
                     {/* head */}
-                    <thead>
+                    <thead className='text-white'>
                         <tr>
                             <th>Class image</th>
                             <th>Instructor Name</th>
@@ -54,12 +55,12 @@ const MyBookings = () => {
                             <th>Payment</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody className='text-white'>
                         {
                             myBookings.map(booking => <>
                                 <tr key={booking._id}>
                                     <td>
-                                        <div className="flex items-center space-x-3">
+                                        <div key={booking._id} className="flex items-center space-x-3">
                                             <div className="avatar">
                                                 <div className=" mask-squire circle w-24  h-24 ">
                                                     <img src={booking.classImageURL} alt="Avatar Tailwind CSS Component" />
@@ -78,9 +79,9 @@ const MyBookings = () => {
                                             booking.className
                                         }</td>
                                     <th>
-                                        <button onClick={()=>handledelete(booking._id)} className="btn btn-primary btn-lg text-white p-2">Delete</button>
+                                        <button onClick={()=>handledelete(booking._id)} className="btn btn-accent text-white">Delete</button>
                                     </th>
-                                    <th><button className='btn btn-primary btn-lg text-white p-2'>Payment</button></th>
+                                    <th><Link to={`/payment/${booking._id}`}><button className="btn btn-accent text-white">Payment </button></Link>  </th>
                                 </tr>
 
                             </>)

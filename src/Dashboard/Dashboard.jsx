@@ -8,21 +8,21 @@ const Dashboard = () => {
     const [isInstructor] = useInstructor()
     return (
         <div>
-            <div className="drawer lg:drawer-open">
+            <div className="drawer  lg:drawer-open">
                 <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
                 <div className="drawer-content flex flex-col items-center justify-center">
                     {/* Page content here */}
                     <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">Open Dashboard</label>
                     <Outlet></Outlet>
                 </div>
-                <div className="drawer-side">
+                <div className="drawer-side  bg-emerald-800">
                     <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
-                    <ul className="menu p-4 w-80 h-full bg-base-200 text-base-content">
+                    <ul className="menu p-4 w-80 h-full  bg-emerald-800 text-center text-white ">
                         {
                             isAdmin ? <>
                                 <li><Link>Admin Home</Link></li>
                                 <li><Link to='/alluser'>All user</Link></li>
-                                <li><Link to='/approved'>Approved </Link></li></> : isInstructor ?
+                                <li><Link to='/allclass'>All Action </Link></li></> : isInstructor ?
                                 <>
                                     <li><Link to='/addclass'>Add class</Link>
                                     </li>
@@ -30,6 +30,7 @@ const Dashboard = () => {
                                     <li><Link to='/myclass'>My Class</Link></li></> : <>
                                     <li><Link to='/booking'>My Booking</Link>
                                     </li>
+                                    {/* <li><Link to='/payment'>Payment</Link></li> */}
                                     <li><Link>Payment History</Link></li>
                                     <li><Link>User Home</Link></li></>
                         }

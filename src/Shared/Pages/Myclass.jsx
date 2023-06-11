@@ -17,16 +17,17 @@ const Myclass = () => {
             <div className="overflow-x-auto">
                 <table className="table">
                     {/* head */}
-                    <thead>
+                    <thead className='text-white'>
                         <tr>
                             <th>Class image</th>
                             <th>Instructor Name</th>
                             <th>Class Name</th>
                             <th>status</th>
+                            <th> Update Class</th>
                           
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody className='text-white'>
                         {
                             classes.map(booking => <>
                                 <tr key={booking._id}>
@@ -51,10 +52,13 @@ const Myclass = () => {
                                         }</td>
                                     <th>
                                        <div className='flex gap-4'>
-                                       <button className="btn btn-primary btn-lg text-white p-2">{booking.status}</button>
+                                       <button className="btn btn-accent p-2 text-white">{booking.status}</button>
 
-                                       <Link to={`/updateclass/${booking._id}`}><button className="btn btn-primary">Update </button></Link>                                      
+                                                                          
                                        </div>
+                                    </th>
+                                    <th>
+                                    <Link to={`/updateclass/${booking._id}`}><button className="btn btn-accent p-2 text-white">Update Class</button></Link>  
                                     </th>
                                     
                                 </tr>

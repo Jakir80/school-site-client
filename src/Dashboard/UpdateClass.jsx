@@ -1,11 +1,6 @@
 import { useLoaderData } from "react-router-dom";
 import { toast } from "react-toastify";
-// app.get("/myclass/:email", async (req, res) => {
-//     console.log('email',req.params.email)
-//     const Class = await ClassesCollection.find({ 
-//         instructorEmail: req.params.email }).toArray();
-//     res.send(Class);
-// });
+
 const UpdateClass = () => {
     const updateclasses = useLoaderData();
     const { className,
@@ -19,9 +14,8 @@ const UpdateClass = () => {
         const className = form.className.value;
         const classImageURL = form.classImageURL.value;
         const availableSeats=form.availableSeats.value;
-        form.reset()
-        // console.log(price, description)
-        const updatedclass = {
+        form.reset() 
+     const updatedclass = {
             price, className, classImageURL,availableSeats
         }
         console.log(updatedclass)
@@ -42,11 +36,11 @@ const UpdateClass = () => {
     }
 
     return (
-        <div className=" bg-gray-200 p-10 rounded-lg shadow-lg">
+        <div className="  text-white  shadow-2xl border-b-sky-600  bg-lime-800 p-8">
             <form onSubmit={handleupdateClass} >
-                <div className="grid grid-cols-2 gap-4 mb-4">
+                <div className="grid grid-cols-2 gap-4 mb-4 text-white">
                     <div>
-                        <label className="text-gray-700 font-medium">quantity</label>
+                        <label className=" font-medium">Class Name</label>
                         <input
                             type="text"
                             name='className'
@@ -58,7 +52,7 @@ const UpdateClass = () => {
                 </div>
                 <div className="grid grid-cols-2 gap-4 mb-4">
                     <div>
-                        <label className="text-gray-700 font-medium">Price</label>
+                        <label className="font-medium">Price</label>
                         <input
                             type="text"
                             defaultValue={price}
@@ -71,7 +65,7 @@ const UpdateClass = () => {
                 <div className='grid grid-cols-2 gap-4 mb-4'>
                 </div>
                 <div className="mb-4">
-                    <label className="text-gray-700 font-medium">Image URl</label>
+                    <label className=" font-medium">Image URl</label>
                     <input
                         type="text"
                         defaultValue={classImageURL}
@@ -81,16 +75,16 @@ const UpdateClass = () => {
                     />
                 </div>
                 <div className="mb-4">
-                    <label className="text-gray-700 font-medium">Available seats</label>
+                    <label className=" font-medium">Available seats</label>
                     <input
                         type="text"
                         defaultValue={availableSeats}
-                        className="w-full border border-gray-400 rounded px-3 py-2"
+                        className="w-full border  rounded px-3 py-2"
                         placeholder="Enter Description"
                         name='availableSeats'
                     />
                 </div>
-                <button className="bg-gray-600 btn-block btn  text-white px-4 py-2 rounded hover:bg-gray-800">
+                <button className="btn btn-accent btn-block text-white px-4 py-2 rounded ">
                     Submit
                 </button>
             </form>

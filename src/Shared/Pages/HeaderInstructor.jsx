@@ -27,7 +27,7 @@ const HeaderInstructor = () => {
         <div className="flex items-center space-x-3">
           <div className="avatar">
             <div className=" mask-squire circle w-24  h-24 ">
-              <img src={instructor.picture} alt="Avatar Tailwind CSS Component" />
+              <img src={instructor.photoUrl} alt="Avatar Tailwind CSS Component" />
             </div>
           </div>
           <div>
