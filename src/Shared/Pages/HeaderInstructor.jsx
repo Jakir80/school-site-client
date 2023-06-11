@@ -8,15 +8,15 @@ const HeaderInstructor = () => {
         .then(data=>Setinstructor(data))
     },[])
     return (
-        <div>
+        <div className='text-white'>
       <div className="overflow-x-auto">
   <table className="table">
     {/* head */}
-    <thead>
+    <thead className='text-white'>
       <tr>    
         <th>Instructor Name</th>     
         <th>Email</th>    
-        <th>Add Class</th>
+       <th>Name</th>
       </tr>
     </thead>
     <tbody>
@@ -31,14 +31,14 @@ const HeaderInstructor = () => {
             </div>
           </div>
           <div>
-            <div className="font-bold">{instructor.instructor_name}</div>
+           
        
           </div>
         </div>
       </td>
       <td>{instructor.email}</td>
       <th>
-        <button className="btn btn-primary btn-xs">Add Class</button>
+       {instructor.name}
       </th>
     </tr>    
         

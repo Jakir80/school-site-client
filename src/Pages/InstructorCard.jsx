@@ -5,7 +5,7 @@ const InstructorCard = ({teacher}) => {
     return (
         <div>
             <div className="card card-compact w-96 text-white  shadow-2xl border-b-sky-600  border-2 bg-emerald-800">
-                <figure><img src={photoUrl} alt="Shoes" /></figure>
+                <figure><img src={photoUrl} alt="instructor" className='p-4' /></figure>
                 <div className="card-body">
                     <h2 className="card-title text-2xl">inInstructor Name :{name}</h2>
                     {/* <h2 className="card-title">Class Name:  {class_name}</h2> */}

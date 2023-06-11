@@ -1,12 +1,32 @@
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext)
+    const [theme,Settheme]=useState('light')
     const handleLogout = () => {
         logOut()
     }
-    const [isDarkMode, setIsDarkMode] = useState(false);
+
+
+    useEffect(()=>{
+       if(theme==='dark'){
+        document.documentElement.classList.add('dark')
+       }
+       else{
+        document.documentElement.classList.add('light')
+       } 
+    },[theme])
+
+    const handledarkandlight = () => {
+   Settheme(theme==='dark'?'light':'dark')
+
+        
+    };
+
+
+
+    // const [isDarkMode, setIsDarkMode] = useState(false);
     const location = useLocation();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const toggleMenu = () => {
@@ -20,10 +40,7 @@ const Navbar = () => {
     };
 
 
-    const toggleDarkMode = () => {
-      setIsDarkMode(!isDarkMode);
-      // You can add additional logic here to apply dark mode to your website
-    };
+   
 
 
 
@@ -70,15 +87,15 @@ const Navbar = () => {
                         >
                            Dashboard
                         </Link>  
-                      {/* <ThemeToggle></ThemeToggle>                   */}
-                                         
+                     {/* <button className='btn btn-primary' onClick={handledarkandlight}>Change theme</button>
+                                          */}
                     </div>
 
                     {/* User Login Button */}
                     <div className='flex gap-3'>
                         <>{
-                            user ? <> <img title={user?.displayName} className="rounded rounded-circle me-2" style={{ width: '40px', height: '40px' }} src={user?.photoURL} alt="" />
-                                <button onClick={handleLogout} className="btn btn-outline-primary fw-semibold">Log Out</button> </> : <Link to='/login'><button className="btn btn-outline-primary">Login</button></Link>
+                            user ? <> <img title={user?.displayName} className="rounded-full rounded-circle me-2" style={{ width: '60px', height: '60px' }} src={user?.photoURL} alt="" />
+                                <button onClick={handleLogout} className="btn btn-accent p-2 text-white">Log Out</button> </> : <Link to='/login'><button className="btn btn-accent p-2 text-white">Login</button></Link>
 
                         }
                          </>
