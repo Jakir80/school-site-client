@@ -17,7 +17,7 @@ const Login = () => {
   return (
     <div className="flex w-full p-40 bg-gray-200">
       <div className="m-auto w-1/3">
-        <form onSubmit={handleSubmit(onSubmit)} className=" text-black shadow-md  p-20 rounded-lg border-2 w-full border-green-500 mb-4">
+        <form onSubmit={handleSubmit(onSubmit)} className="text-white shadow-md  p-20 rounded-lg border-2 w-full border-green-500 mb-4">
           <div className="mb-4 ">
             <label className=" text-sm font-bold mb-2" htmlFor="email">
               Email
@@ -26,7 +26,7 @@ const Login = () => {
               {...register('email', { required: true })}
               type="text"
               placeholder="Email"
-              className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline  ${
+              className={`shadow appearance-none border rounded w-full py-2 px-3  leading-tight focus:outline-none focus:shadow-outline  ${
                 errors.email ? 'border-red-500' : ''
               }`}
             />

@@ -23,7 +23,7 @@ const SingleClassCard = ({ singleclass }) => {
     
     };
 
-    fetch('http://localhost:5000/booking', {
+    fetch('https://school-site-server.vercel.app/booking', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

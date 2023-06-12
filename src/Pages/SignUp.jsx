@@ -20,11 +20,11 @@ const SignUp = () => {
     createUser(data.email, data.password)
       .then(result => {
         const loggedUser = result.user;
-        console.log(loggedUser);
+        // console.log(loggedUser);
         updateUserProfile(loggedUser, data.name, data.photoUrl)
           .then(() => {
             const saveUser = { name: data.name, email: data.email, photoUrl: data.photoUrl }
-            fetch('http://localhost:5000/users', {
+            fetch('https://school-site-server.vercel.app/users', {
               method: 'POST',
               headers: {
                 'content-type': 'application/json'
@@ -54,7 +54,7 @@ const SignUp = () => {
         const loggedInUser = result.user;
         // console.log(loggedInUser);
         const saveUser = { name: loggedInUser.displayName, email: loggedInUser.email, photo: loggedInUser.photoUrl }
-        fetch('http://localhost:5000/users', {
+        fetch('https://school-site-server.vercel.app/users', {
           method: 'POST',
           headers: {
             'content-type': 'application/json'

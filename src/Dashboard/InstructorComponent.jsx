@@ -1,13 +1,14 @@
 
 import React, { useContext } from 'react';
 import { useForm } from 'react-hook-form';
+import Swal from 'sweetalert2';
 import { AuthContext } from '../AuthProvider/AuthProvider';
 
 const InstructorComponent = () => {
     const { user } = useContext(AuthContext);
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = async (data) => {
-        const response = await fetch('http://localhost:5000/addclasses', {
+        const response = await fetch('https://school-site-server.vercel.app/addclasses', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -25,6 +26,7 @@ const InstructorComponent = () => {
         if (response.ok) {
             const responseData = await response.json();
             console.log(responseData.message);
+            Swal.fire("class added successfully")
             // Handle success or show a success message
         }
     }
@@ -96,7 +98,7 @@ const InstructorComponent = () => {
                     </div>
                 </div>
 
-                <button className='btn btn-primary bg-gray-500 p-2 m-2 w-full' type="submit">Add Class</button>
+                <button className='btn btn-accent p-2 m-2 w-full' type="submit">Add Class</button>
             </form>
         </div>
     );

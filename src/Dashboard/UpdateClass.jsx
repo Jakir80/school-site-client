@@ -19,7 +19,7 @@ const UpdateClass = () => {
             price, className, classImageURL,availableSeats
         }
         console.log(updatedclass)
-        fetch(`http://localhost:5000/updateclass/${_id}`, {
+        fetch(`https://school-site-server.vercel.app/updateclass/${_id}`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

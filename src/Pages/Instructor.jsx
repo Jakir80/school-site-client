@@ -4,7 +4,7 @@ import InstructorCard from './instructorCard';
 const Instructor = () => {
     const [instructors,Setinstructor]=useState([])
     useEffect(()=>{
-        fetch('http://localhost:5000/popularinstructor')
+        fetch('https://school-site-server.vercel.app/popularinstructor')
         .then(res=>res.json())
         .then(data=>Setinstructor(data))
     },[])

@@ -15,6 +15,7 @@ import HeaderInstructor from "../Shared/Pages/HeaderInstructor";
 import Home from "../Shared/Pages/Home";
 import MyBookings from "../Shared/Pages/MyBookings";
 import Myclass from "../Shared/Pages/Myclass";
+import AdminRoute from "./AdminRout";
 
 const router=createBrowserRouter([
     {
@@ -58,7 +59,7 @@ const router=createBrowserRouter([
             },
             {
                 path:'alluser',
-                element:<Alluser></Alluser>
+                element:<AdminRoute><Alluser></Alluser></AdminRoute>
             },
             {
                 path:'myclass',
@@ -67,7 +68,7 @@ const router=createBrowserRouter([
             {
                 path:'payment/:id',
                 element:<Payment></Payment>,
-                loader:({params})=>fetch(`http://localhost:5000/payment/${params.id}`)
+                loader:({params})=>fetch(`https://school-site-server.vercel.app/payment/${params.id}`)
                 
             },
             {
@@ -77,7 +78,7 @@ const router=createBrowserRouter([
             {
                 path:'updateclass/:id',
                 element:<UpdateClass></UpdateClass>,
-                loader: ({ params }) => fetch(`http://localhost:5000/update/${params.id}`)
+                loader: ({ params }) => fetch(`https://school-site-server.vercel.app/update/${params.id}`)
             
             },
             {
@@ -89,6 +90,12 @@ const router=createBrowserRouter([
         ]
 
         
-    }
+    },
+
+
+    ///new routs
+    
+
+
 ])
 export default router;

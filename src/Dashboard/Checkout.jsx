@@ -15,7 +15,7 @@ const Checkout = ({ payment, amount }) => {
     const [Processing, SetProcessing] = useState(false)
     const [transactionId, SettransactionId] = useState("")
     // console.log('client secre',clientsecret)
-    console.log("amount", amount)
+    // console.log("amount", amount)
     useEffect(() => {
         if (amount > 0) {
             axiosSecure.post('/create-payment-intent', { price: amount }, {
@@ -25,7 +25,7 @@ const Checkout = ({ payment, amount }) => {
                 },
             })
                 .then(res => {
-                    console.log("client secret ", res.data.clientSecret)
+                    // console.log("client secret ", res.data.clientSecret)
                     setClientSecret(res.data.clientSecret)
                 })
         }

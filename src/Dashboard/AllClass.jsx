@@ -4,17 +4,17 @@
 // const AllClass = () => {
 
 //     // const {data:classes=[],refetch}=useQuery(['class'],async()=>{
-//     //     const res=await fetch('http://localhost:5000/fullclasses');
+//     //     const res=await fetch('https://school-site-server.vercel.app/fullclasses');
 //     //     return res.json()
 //     // })
 //     const [classes, setClasses] = useState([]);
 //     useEffect(() => {
-//         fetch('http://localhost:5000/fullclasses')
+//         fetch('https://school-site-server.vercel.app/fullclasses')
 //             .then(res => res.json())
 //             .then(data => setClasses(data))
 //     }, [])
 //     const handleApprove = (classitem) => {
-//         fetch(`http://localhost:5000/classe/status/approved${classitem._id}`,{
+//         fetch(`https://school-site-server.vercel.app/classe/status/approved${classitem._id}`,{
 //             method:'PATCH',
 
 //         })
@@ -23,7 +23,7 @@
 //             console.log(data)
 //             if(data.modifiedCount>0){
 //                 Swal.fire('approved')
-//                 fetch('http://localhost:5000/fullclasses')
+//                 fetch('https://school-site-server.vercel.app/fullclasses')
 //                 .then(res => res.json())
 //                 .then(data => setClasses(data))
 //             }

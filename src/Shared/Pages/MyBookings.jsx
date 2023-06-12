@@ -8,7 +8,7 @@ const MyBookings = () => {
     const { user } = useContext(AuthContext)
     const [myBookings, SetMybookings] = useState([])
     useEffect(() => {
-        fetch(`http://localhost:5000/mybookings/${user?.email}`)
+        fetch(`https://school-site-server.vercel.app/mybookings/${user?.email}`)
             .then(res => res.json())
             .then(data => SetMybookings(data))
     }, [user])
@@ -24,7 +24,7 @@ const MyBookings = () => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/bookings/${id}`, {
+                fetch(`https://school-site-server.vercel.app/bookings/${id}`, {
                     method: "DELETE",
                     headers: {
                         "content-type": "application/json"
@@ -32,7 +32,7 @@ const MyBookings = () => {
                 })
                     .then(res => res.json())
                     .then(data => {
-                        console.log(data)
+                        // console.log(data)
                         const remaining = myBookings.filter(booked => booked._id != id);
                         SetMybookings(remaining)
                     })

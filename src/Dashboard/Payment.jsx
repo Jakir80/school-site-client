@@ -9,7 +9,7 @@ const Payment = () => {
     const { price, className, classImageURL, availableSeats } = payment;
     // const total = price.reduce((sum, item) => sum + item.price, 0);
     const amount=parseFloat(price);
-    console.log('payment',amount)
+    // console.log('payment',amount)
     return (
         <div>
 
