@@ -17,9 +17,6 @@ const SignUp = () => {
     getValues,
   } = useForm();
   const onSubmit = data => {
-    if(loading){
-      return <span className="loading loading-spinner text-error"></span>
-    }
     createUser(data.email, data.password)
       .then(result => {
         const loggedUser = result.user;
@@ -52,9 +49,7 @@ const SignUp = () => {
       })
   }
   const handleGooglesignin = () => {
-    if(loading){
-      return <span className="loading loading-spinner text-error"></span>
-    }
+  
     signInWithGoogle()
       .then(result => {
         const loggedInUser = result.user;

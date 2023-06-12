@@ -8,11 +8,9 @@ const Login = () => {
   const { register, handleSubmit, formState: { errors } } = useForm();
 
   const navigate=useNavigate()
-  const { signIn,loading } = useContext(AuthContext);
+  const { signIn } = useContext(AuthContext);
   const onSubmit = (data) => {
-    if(loading){
-      return <span className="loading loading-spinner text-error"></span>
-    }
+  
     signIn(data.email, data.password);
     navigate('/')
   };
