@@ -99,7 +99,7 @@ const router = createBrowserRouter([
 
                     },
                     {
-                        path:'dashboard/welcome',
+                        path:'welcome',
                         element:<AdminHome></AdminHome>
                     }
 

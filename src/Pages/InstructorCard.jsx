@@ -20,7 +20,8 @@ const InstructorCard = ({teacher}) => {
           />
         </figure>
         <div className="card-body">
-          <h2 className="card-title text-2xl">Instructor Name: {name}</h2>
+          <h2 className="card-title text-2xl">Instructor Name: <br /> {name}</h2>
+          <p>Total enrolled {10}</p>
         </div>
       </motion.div>
       

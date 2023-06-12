@@ -3,9 +3,9 @@
 const Slider = () => {
     return (
 
-        <div className="carousel md:w-full sm:w-auto  ">
+        <div className="carousel md:w-75 sm:w-auto  ">
         <div id="slide1" className="carousel-item relative sm:w-auto md:w-full  rounded-lg">
-            <img src="https://media.istockphoto.com/id/1201438254/photo/basketball-arena.webp?b=1&s=170667a&w=0&k=20&c=rddJQ4oakpWkZf0sO60eA7eJ0qK3LWBliPUn4d3OR4g=" className="md:w-full sm:w-auto rounded-lg" />
+            <img src="https://media.istockphoto.com/id/1434690149/photo/ball-on-the-green-field-in-soccer-stadium-ready-for-game-in-the-midfield.webp?b=1&s=170667a&w=0&k=20&c=5Igcbt2oEQYrdsT5bejP3n2tWoVkKRhGHkyMCoD2rr4=" className="md:w-full sm:w-auto rounded-lg" />
             <div className="absolute flex justify-center sm:w-auto md:gap-20 transform -translate-y-1/2 left-5 right-5 bottom-0 ">
                 <a href="#slide4" className="btn btn-circle">❮</a>
                 <a href="#slide2" className="btn btn-circle">❯</a>
