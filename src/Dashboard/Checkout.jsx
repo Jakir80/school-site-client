@@ -89,6 +89,7 @@ const Checkout = ({ payment, amount }) => {
                 bookigid: payment.booked,
                 itemsId: payment._id,
                 itemName: payment.className,
+                itemimage:payment.classImageURL
             }
             axiosSecure.post('/payment', payments)
                 .then(res => {

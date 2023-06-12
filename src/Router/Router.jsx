@@ -3,6 +3,7 @@ import AdminHome from "../Dashboard/AdminHome";
 import Alluser from "../Dashboard/Alluser";
 import Dashboard from "../Dashboard/Dashboard";
 import InstructorComponent from "../Dashboard/InstructorComponent";
+import MyEnrolled from "../Dashboard/MyEnrolled";
 import Payment from "../Dashboard/Payment";
 import PaymentHistory from "../Dashboard/PaymentHistory";
 import Test from "../Dashboard/Test";
@@ -101,6 +102,10 @@ const router = createBrowserRouter([
                     {
                         path:'welcome',
                         element:<AdminHome></AdminHome>
+                    },
+                    {
+                        path:'myenrolled',
+                        element:<MyEnrolled></MyEnrolled>
                     }
 
                 ]
