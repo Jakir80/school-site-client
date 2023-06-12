@@ -55,7 +55,7 @@ const Checkout = ({ payment, amount }) => {
             setError(error.message)
         } else {
             setError('')
-            // console.log('[PaymentMethod]', paymentMethod);
+
         }
 
 
@@ -79,7 +79,6 @@ const Checkout = ({ payment, amount }) => {
         SetProcessing(false)
         console.log("payment-entend", paymentIntent)
         if (paymentIntent.status === 'succeeded') {
-            //send payment information to the server 
 
             SettransactionId(paymentIntent.id)
             const transactionid = paymentIntent.id;
@@ -106,7 +105,7 @@ const Checkout = ({ payment, amount }) => {
 
     return (
         <>
-            <form  onSubmit={handleSubmit} className='w-full'>
+            <form onSubmit={handleSubmit} className='w-full'>
                 <CardElement
                     options={{
                         style: {
