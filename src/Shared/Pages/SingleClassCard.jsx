@@ -1,16 +1,17 @@
 /* eslint-disable react/prop-types */
 import React, { useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 
 const SingleClassCard = ({ singleclass }) => {
+  const navigate=useNavigate();
   const { user } = useContext(AuthContext)
   const { className,
     classImageURL,
     availableSeats,
     price, 
     instructorName } = singleclass;
-  // const navigate=useNavigate();
   const handleBooking = () => {
     const bookingData = {
       className,
@@ -41,6 +42,14 @@ const SingleClassCard = ({ singleclass }) => {
         console.error('Error booking class:', error);
       })
   }
+
+  const toasts=()=>{
+    if (!user) {
+      Swal.fire('Please Login first')
+      navigate('/login')
+    }
+  }
+
   return (
     <div>
       <div className="card card-compact w-96 text-white  shadow-2xl border-b-sky-600  border-2 bg-emerald-800">
@@ -52,7 +61,10 @@ const SingleClassCard = ({ singleclass }) => {
           {/* <p> How Much Student Buy it :  {students_enrolled}</p> */}
           <p> Available Seat:  {availableSeats}</p>
           <div className="card-actions justify-end">
-            <button onClick={handleBooking} className="btn btn-accent p-2">Booking Now</button>
+         {
+          user? <button onClick={handleBooking} className="btn btn-accent p-2">Booking Now</button>:<button onClick={toasts} className="btn btn-accent p-2">Booking Now</button>
+
+         }
 
           </div>
 
