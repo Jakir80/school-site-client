@@ -14,7 +14,7 @@ const Slider = () => {
                 <div>
 
                     <div>
-                        <h2 className='text-6xl text-white font-bold'>This is our Academic website where is you can buy class</h2>
+                        <h2 className='md:text-6xl text-white font-bold'>This is our Academic website where is you can buy class</h2>
                         <p className='text-white mb-10'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus blanditiis earum explicabo aspernatur aut quam sint! Vitae autem a quam?.</p>
                     </div>
                     
@@ -23,7 +23,7 @@ const Slider = () => {
         </div>
         <div id="slide2" className="carousel-item relative sm:w-auto md:w-full">
             <img src="https://media.istockphoto.com/id/1487475752/photo/soccer-training-for-little-school-children-group-of-kids-with-football-soccer-balls-at.jpg?s=612x612&w=0&k=20&c=HPqt93Pwh_H7Sv521C_CIeJOjvC-E3Vg0ZnGZvkFnWo=" className="w-full rounded-lg" />
-            <div className="absolute flex   gap-20    justify-center transform -translate-y-1/2 left-5 right-5 bottom-0 ">
+            <div className="absolute flex   md:gap-20    justify-center transform -translate-y-1/2 left-5 right-5 bottom-0 ">
                 <a href="#slide1" className="btn btn-circle">❮</a>
                 <a href="#slide3" className="btn btn-circle">❯</a>
             </div>
@@ -31,7 +31,7 @@ const Slider = () => {
                 <div>
 
                     <div>
-                        <h2 className='text-6xl text-white font-bold'>This is Our official Academic website </h2>
+                        <h2 className='md:text-6xl text-white font-bold'>This is Our official Academic website </h2>
                         <p className='text-white mb-10'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur nihil enim necessitatibus sed quia maiores voluptates! Nulla numquam animi maxime.</p>
                     </div>
                     
@@ -48,7 +48,7 @@ const Slider = () => {
                 <div>
 
                     <div>
-                        <h2 className='text-6xl text-white font-bold'>This is our Academic website where is you can buy class</h2>
+                        <h2 className='md:text-6xl text-white font-bold'>This is our Academic website where is you can buy class</h2>
                         <p className='text-white mb-10'>Lorem ipsum dolor sit amet consectetur adipisicing elit. A in, molestiae aliquam error vero repudiandae deleniti id corrupti ipsa atque.</p>
                     </div>
                     
@@ -57,7 +57,7 @@ const Slider = () => {
         </div>
         <div id="slide4" className="carousel-item relative w-full">
             <img src="https://media.istockphoto.com/id/1183940092/photo/footballer-dribbling-ball-on-training-between-orange-cones-young-football-player-in-sports.webp?b=1&s=170667a&w=0&k=20&c=Ml9tjfK4Mc9Ur0hO2ivh8DUcBZFfBW-fxZiROLymR-M=" className="w-full rounded-lg" />
-            <div className="absolute flex   gap-20    justify-center transform -translate-y-1/2 left-5 right-5 bottom-0">
+            <div className="absolute flex  md:gap-20    justify-center transform -translate-y-1/2 left-5 right-5 bottom-0">
                 <a href="#slide3" className="btn btn-circle">❮</a>
                 <a href="#slide1" className="btn btn-circle">❯</a>
             </div>
@@ -65,7 +65,7 @@ const Slider = () => {
                 <div>
 
                     <div>
-                        <h2 className='text-6xl text-white font-bold'>This is our Academic website where is you can buy class</h2>
+                        <h2 className='md:text-6xl text-white font-bold'>This is our Academic website where is you can buy class</h2>
                         <p className='text-white mb-10'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque nisi totam sit consequatur dolor fugit officia possimus a omnis perspiciatis.</p>
                     </div>
                    

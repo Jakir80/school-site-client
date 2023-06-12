@@ -85,7 +85,7 @@ const MyBookings = () => {
                                     <th>
                                         <button onClick={() => handledelete(booking._id)} className="btn btn-accent text-white">Delete</button>
                                     </th>
-                                    <th><Link to={`/payment/${booking._id}`}><button className="btn btn-accent text-white">Payment </button></Link>  </th>
+                                    <th><Link to={`payment/${booking._id}`}><button className="btn btn-accent text-white">Payment </button></Link>  </th>
                                 </tr>
 
                             </>)

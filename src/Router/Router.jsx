@@ -17,84 +17,100 @@ import MyBookings from "../Shared/Pages/MyBookings";
 import Myclass from "../Shared/Pages/Myclass";
 import AdminRoute from "./AdminRout";
 
-const router=createBrowserRouter([
+const router = createBrowserRouter([
     {
-        path:'/',
-        element:<Main></Main>,
-        errorElement:<Error></Error>,
-        children:[
+        path: '/',
+        element: <Main></Main>,
+        errorElement: <Error></Error>,
+        children: [
             {
-                path:'/',
-                element:<Home></Home>
+                path: '/',
+                element: <Home></Home>
             },
             {
-                path:'login',
-                element:<Login></Login>
+                path: 'login',
+                element: <Login></Login>
 
             },
             {
-                path:'SignUp',
-                element:<SignUp></SignUp>
+                path: 'SignUp',
+                element: <SignUp></SignUp>
             },
             {
-                path:'classes',
-                element:<Classes></Classes>
+                path: 'classes',
+                element: <Classes></Classes>
             },
             {
-                path:'headerinstructor',
-                element:<HeaderInstructor></HeaderInstructor>
+                path: 'headerinstructor',
+                element: <HeaderInstructor></HeaderInstructor>
             },
-           
+
+            // {
+            //     path:'dashboard',
+            //     element:<Dashboard></Dashboard>
+            // },
+
+
+
+
+
             {
-                path:'dashboard',
-                element:<Dashboard></Dashboard>
-            },
-            {
-                path:'booking',
-                element:<MyBookings></MyBookings>
-            },
-            {
-                path:'addclass',
-                element:<InstructorComponent></InstructorComponent>
-            },
-            {
-                path:'alluser',
-                element:<AdminRoute><Alluser></Alluser></AdminRoute>
-            },
-            {
-                path:'myclass',
-                element:<Myclass></Myclass>
-            },
-            {
-                path:'payment/:id',
-                element:<Payment></Payment>,
-                loader:({params})=>fetch(`https://school-site-server.vercel.app/payment/${params.id}`)
-                
-            },
-            {
-                path:'allclass',
-                element:<Test></Test>
-            },
-            {
-                path:'updateclass/:id',
-                element:<UpdateClass></UpdateClass>,
+                path: 'updateclass/:id',
+                element: <UpdateClass></UpdateClass>,
                 loader: ({ params }) => fetch(`https://school-site-server.vercel.app/update/${params.id}`)
-            
+
             },
+
+
             {
-                path:'payment',
-                element:<PaymentHistory></PaymentHistory>
+                path: 'dashboard',
+                element: <Dashboard></Dashboard>,
+                children: [
+                    {
+                        path: 'dashboard/payment',
+                        element: <PaymentHistory></PaymentHistory>
+                    },
+                    {
+                        path: 'dashboard/allclass',
+                        element: <Test></Test>
+                    },
+                    {
+                        path: 'myclass',
+                        element: <Myclass></Myclass>
+                    },
+                    {
+                        path: 'dashboard/alluser',
+                        element: <AdminRoute><Alluser></Alluser></AdminRoute>
+                    },
+                    {
+                        path: 'addclass',
+                        element: <InstructorComponent></InstructorComponent>
+                    },
+                    {
+                        path: 'dashboard/booking',
+                        element: <MyBookings></MyBookings>
+                    },
+
+                    {
+                        path: 'dashboard/booking/payment/:id',
+                        element: <Payment></Payment>,
+                        loader: ({ params }) => fetch(`https://school-site-server.vercel.app/payment/${params.id}`)
+
+                    },
+
+                ]
+
             }
-         
-            
+
+
         ]
 
-        
+
     },
 
 
     ///new routs
-    
+
 
 
 ])

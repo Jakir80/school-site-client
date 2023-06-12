@@ -13,7 +13,7 @@ const Payment = () => {
     return (
         <div>
 
-            <div className="overflow-x-auto mb-10">
+            <div className=" w-full mb-10">
                 <table className="table">
                     {/* head */}
                     <thead className='text-white'>

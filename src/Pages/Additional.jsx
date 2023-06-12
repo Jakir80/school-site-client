@@ -8,7 +8,7 @@ const Additional = () => {
       })
 
     return (
-        <div className='md:flex items-center justify-between gap-5 md:mt-60' >
+        <div className='md:flex md:items-center justify-between md:gap-5 md:mt-60' >
 
             <div data-aos="fade-right" className='bg-green-600 md:w-1/2 text-white md:p-40'>
                 <h1 className='w-full md:text-3xl font-semibold m-5'>Join our class and meet up with our Popular instructor </h1>

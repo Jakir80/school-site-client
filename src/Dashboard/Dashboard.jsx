@@ -21,17 +21,17 @@ const Dashboard = () => {
                         {
                             isAdmin ? <>
                                 <li><Link>Admin Home</Link></li>
-                                <li><Link to='/alluser'>All user</Link></li>
-                                <li><Link to='/allclass'>All Action </Link></li></> : isInstructor ?
+                                <li><Link to='dashboard/alluser'>All user</Link></li>
+                                <li><Link to='dashboard/allclass'>All Action </Link></li></> : isInstructor ?
                                 <>
-                                    <li><Link to='/addclass'>Add class</Link>
+                                    <li><Link to='/dashboard/addclass'>Add class</Link>
                                     </li>
                                     <li><Link>Student enrolled</Link></li>
-                                    <li><Link to='/myclass'>My Class</Link></li></> : <>
-                                    <li><Link to='/booking'>My Booking</Link>
+                                    <li><Link to='/dashboard/myclass'>My Class</Link></li></> : <>
+                                    <li><Link to='dashboard/booking'>My Booking</Link>
                                     </li>
                                     {/* <li><Link to='/payment'>Payment</Link></li> */}
-                                    <li><Link to='/payment'>Payment History</Link></li>
+                                    <li><Link to='dashboard/payment'>Payment History</Link></li>
                                     <li><Link>User Home</Link></li></>
                         }
                         <div className='divider'></div>

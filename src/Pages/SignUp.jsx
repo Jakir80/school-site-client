@@ -6,7 +6,7 @@ import { AuthContext } from '../AuthProvider/AuthProvider';
 // Update the path to your AuthContext
 
 const SignUp = () => {
-  const { createUser, signInWithGoogle, updateUserProfile } = useContext(AuthContext);
+  const { createUser, signInWithGoogle, updateUserProfile,loading } = useContext(AuthContext);
   const navigate = useNavigate();
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
@@ -17,6 +17,9 @@ const SignUp = () => {
     getValues,
   } = useForm();
   const onSubmit = data => {
+    if(loading){
+      return <span className="loading loading-spinner text-error"></span>
+    }
     createUser(data.email, data.password)
       .then(result => {
         const loggedUser = result.user;
@@ -49,6 +52,9 @@ const SignUp = () => {
       })
   }
   const handleGooglesignin = () => {
+    if(loading){
+      return <span className="loading loading-spinner text-error"></span>
+    }
     signInWithGoogle()
       .then(result => {
         const loggedInUser = result.user;

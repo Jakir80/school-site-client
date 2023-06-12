@@ -11,13 +11,13 @@ useEffect(()=>{
 
     return (
         <div>
-            <h2 className='text-center text-4xl m-5 font-bold  p-8
+            <h2 className='md:text-center text-4xl m-5 font-bold 
             text-white'>Our Popular classes.There is you can buy your class</h2>
-            <p className='text-center text-white
+            <p className='md:text-center text-white
             mb-5'>This is our popular class . This listed class student but it most</p>
           
           
-          <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-10">
+          <div className="grid sm:grid-cols-1 md:grid-cols-3 md:gap-10 sm:gap-4 items-center">
                 {
                     Classes.map(popular => <ClassCard
                         key={popular._id}

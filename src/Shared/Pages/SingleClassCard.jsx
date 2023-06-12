@@ -4,13 +4,12 @@ import Swal from 'sweetalert2';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 
 const SingleClassCard = ({ singleclass }) => {
+  const { user } = useContext(AuthContext)
   const { className,
     classImageURL,
     availableSeats,
-    price,
-  
+    price, 
     instructorName } = singleclass;
-  const { user } = useContext(AuthContext)
   // const navigate=useNavigate();
   const handleBooking = () => {
     const bookingData = {
@@ -20,7 +19,7 @@ const SingleClassCard = ({ singleclass }) => {
       price,
       instructorName,
       booked:singleclass._id,
-      email: user.email,
+      email: user?.email,
     
     };
 

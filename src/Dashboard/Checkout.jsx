@@ -106,7 +106,7 @@ const Checkout = ({ payment, amount }) => {
 
     return (
         <>
-            <form  onSubmit={handleSubmit}>
+            <form  onSubmit={handleSubmit} className='w-full'>
                 <CardElement
                     options={{
                         style: {
