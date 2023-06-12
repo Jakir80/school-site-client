@@ -1,4 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
+import AdminHome from "../Dashboard/AdminHome";
 import Alluser from "../Dashboard/Alluser";
 import Dashboard from "../Dashboard/Dashboard";
 import InstructorComponent from "../Dashboard/InstructorComponent";
@@ -72,7 +73,7 @@ const router = createBrowserRouter([
                     },
                     {
                         path: 'dashboard/allclass',
-                        element: <Test></Test>
+                        element: <AdminRoute><Test></Test></AdminRoute>
                     },
                     {
                         path: 'myclass',
@@ -97,6 +98,10 @@ const router = createBrowserRouter([
                         loader: ({ params }) => fetch(`https://school-site-server.vercel.app/payment/${params.id}`)
 
                     },
+                    {
+                        path:'dashboard/welcome',
+                        element:<AdminHome></AdminHome>
+                    }
 
                 ]
 

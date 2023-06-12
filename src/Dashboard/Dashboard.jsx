@@ -25,7 +25,7 @@ const Dashboard = () => {
                                 <li><NavLink to='dashboard/alluser'>
                                    <FaUser></FaUser> All user</NavLink></li>
                                 <li><NavLink to='dashboard/allclass'>
-                                   <FaAccusoft></FaAccusoft> All Action </NavLink></li></> : isInstructor ?
+                                   <FaAccusoft></FaAccusoft> Manage CLasses </NavLink></li></> : isInstructor ?
                                 <>
                                     <li><NavLink to='/dashboard/addclass'>
                                        <FaAd></FaAd> Add class</NavLink>
