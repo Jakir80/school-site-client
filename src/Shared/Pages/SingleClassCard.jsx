@@ -11,6 +11,7 @@ const SingleClassCard = ({ singleclass }) => {
   
     instructorName } = singleclass;
   const { user } = useContext(AuthContext)
+  // const navigate=useNavigate();
   const handleBooking = () => {
     const bookingData = {
       className,

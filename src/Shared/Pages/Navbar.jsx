@@ -82,11 +82,10 @@ const Navbar = () => {
                         >
                            Dashboard
                         </Link>  
-                     {/* <button className='btn btn-primary' onClick={handledarkandlight}>Change theme</button>
-                                          */}
+                   
                     </div>
 
-                    {/* User Login Button */}
+                
                     <div className='flex gap-3'>
                         <>{
                             user ? <> <img title={user?.displayName} className="rounded-full rounded-circle me-2" style={{ width: '60px', height: '60px' }} src={user?.photoURL} alt="" />
@@ -138,36 +137,29 @@ const Navbar = () => {
                             Home
                         </Link>
                         <Link
-                            to="/blog"
-                            className={`text-white block hover:text-gray-300 font-medium ${isActiveRoute('/blog') ? 'underline text-blue-500' : ''
+                            to="/classes"
+                            className={`text-white block hover:text-gray-300 font-medium ${isActiveRoute('/classes') ? 'underline text-blue-500' : ''
                                 }`}
                             onClick={closeMenu}
                         >
-                            Blog
+                            Classes
                         </Link>
                         <Link
-                            to="/alltoys"
-                            className={`text-white block hover:text-gray-300 font-medium ${isActiveRoute('/alltoys') ? 'underline text-blue-500' : ''
+                            to="/headerinstructor"
+                            className={`text-white block hover:text-gray-300 font-medium ${isActiveRoute('/headerinstructor') ? 'underline text-blue-500' : ''
                                 }`}
                             onClick={closeMenu}
                         >
-                            All Toys
+                           Instructor
                         </Link>
+                     
                         <Link
-                            to="/mytoys"
-                            className={`text-white block hover:text-gray-300 font-medium ${isActiveRoute('/mytoys') ? 'underline text-blue-500' : ''
+                            to="/dashboard"
+                            className={`text-white block hover:text-gray-300 font-medium ${isActiveRoute('/dashboard') ? 'underline text-blue-500' : ''
                                 }`}
                             onClick={closeMenu}
                         >
-                            My Toys
-                        </Link>
-                        <Link
-                            to="/addproduct"
-                            className={`text-white block hover:text-gray-300 font-medium ${isActiveRoute('/addproduct') ? 'underline text-blue-500' : ''
-                                }`}
-                            onClick={closeMenu}
-                        >
-                            Add Toys
+                            Dashboard
                         </Link>
                     </div>
                 )}

@@ -1,6 +1,4 @@
 
-// import 'react-awesome-slider/dist/custom-animations/cube-animation.css';
-// import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 
 const Slider = () => {
     return (
